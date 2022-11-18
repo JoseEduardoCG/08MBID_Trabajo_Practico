@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+
+<h1>¿Ha mejorado el proceso ganadero en los últimos años?</h1>
+<h2>Contexto y Motivación</h2>
+<p>Se desea responder con visualizaciones de datos la pregunta de si ha mejorado el proceso ganadero en los últimos años.<br><br>
+Los datos utilizados son de la empresa Cefusa, una empresa ganadera de porcino y vacuno, aunque los usados para estos gráficos pertenecen al porcino. Estos datos ya se han utilizado en las asignaturas anteriores del master para el proceso KDD en Minería de Datos y las actividades de Estadística avanzada, para hacer un análisis descriptivo, estudios de clustering y series temporales, sobre los mismos.<br><br>
+Se usan estos mismos datos para intentar darle un carácter de continuidad al estudio inicial, conocer mejor los mismos, simular un mini proyecto recorriendo todas las fases del mismo sobre unos mismos datos y objetivos.</p>
+
+<br>
+<h2>Ganancia Media Diaria</h2>
+<p>Este indicador nos dice cuanto aumenta diariamente el peso de los animales, se recoge al final de cada contrato y disponemos de un histórico del mismo. Es una fuente fiable para comprobar si hay una evolución positiva en el proceso ganadero, porque refleja el crecimiento de los animales, que se ve afectado negativamente ante la aparición de cualquier tipo de problemas, ya sean sanitarios, de manejo, falta de bienestar, malas condiciones en las instalaciones o en la granja, etc. Es un KPI a intentar mejorar y esto se puede hacer con avances en la alimentación, en las condiciones ambientales de los animales, en la selección genética, etc. Es un parámetro con una alta componente estacional, como ya estudié en el análisis de serie temporal con estos mismos datos, pero también demuestra una clara tendencia alcista en los últimos años, marcada con la línea de tendencia del gráfico que acompaño.<br><br>
+He usado, para representar lo explicado un gráfico de líneas que permita resaltar la componente temporal y la conexión de los datos de cada mes con el que le precede y le sucede. El gráfico está creado y publicado con Google Spreadsheets, publicado de forma interactiva para poder comprobar los valores de los datos pasando el ratón por los mismos, sin la necesidad de abrumar el gráfico con estos valores.</p>
+
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTUWH-DULLGqQgxy9sk77hKPpja_9jcqelAmv-f6jmC_WQzeJlJbuzdMHNFWBdS1bHoyt0IESC5PoOB/pubchart?oid=272507149&amp;format=interactive"></iframe>
+
+<br><br>
+<p class="saltodepagina" />
+<h2>Número de Granjas por años</h2>
+<p>Otro buen indicador en la líneas de lo comentado es la evolución del número de granjas a lo largo de los años. Para este gráfico he usado DataWrapper, y un agráfico de barras, que permite comparar mejor los valores de los distintos años, lo he usado apilado pues el principal dato a mostrar es el combinado de los 2 tipos de ganado porcino representados (cerdo blanco e ibérico). El gráfico se ha ampliado con los valores numéricos del número de granjas, y permite interactividad resaltando al pasar el ratón por él el ganado que estemos señalando.</p>
+
+<p>Como se ve a pesar de enmarcarse en unos años inciertos y de gran dificultad por la crisis y la pandemia, la evolución es importante en el número de granjas, que se van ampliando con el paso de los años.</p>
+
+
+<iframe title="Número de Granjas por año" aria-label="Stacked Bars" id="datawrapper-chart-syCi2" src="https://datawrapper.dwcdn.net/syCi2/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="565" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+</script>
+<!-- <img src="https://datawrapper.dwcdn.net/syCi2/full.png"/> -->
+
+<br><br>
+<p class="saltodepagina" />
+<h2>Mapa por años de Expansión Granjas</h2>
+<p>Además del número de granjas también se va extendiendo las zonas en las que estas están, como se puede ver en la evolución del número de explotaciones a lo largo de los últimos períodos de años, y cómo además de el número de granjas, también va acogiendo explotaciones menos localizadas y cada vez más dispersad.</p>
+<p>Este gráfico lo he realizado con Power BI, y como no dispongo de licencia para poder compartir el gráfico de forma interactiva he optado por añadir un pantallazo del mismo y un enlace para poder descargar el fichero que lo define. Con esto pierde la interesante parte de interactividad, pero me permite al menos mostrar un gráfico que creo que puede aportar a la pregunta planteada. Para que se pueda apreciar la evolución he decidido agrupar el número de granjas en períodos de 5 años, he filtrado los últimos por no tener un período completo.</p>
+<p>Como se aprecia las granjas estaban casi exclusivamente circunscritas a la región de Murcia, y en los últimos años se han ido expandiendo hacia Albacete, Granada, Almería, Alicante, Valencia e incluso aunque no entre en los períodos mostrados a Toledo.</p>
+<br><br>
+<img src="https://drive.google.com/uc?export=view&id=1yQHvtUI1SPUQPNdMlSOwDD1MFAj389QB" alt=">Mapa por años de Expansión Granjas">
+<br><br>
+<a href="https://drive.google.com/uc?export=download&id=1yQHvtUI1SPUQPNdMlSOwDD1MFAj389QB" download>
+    Descargar Imagen
+</a>
+<br><br>
+<a href="https://drive.google.com/file/d/1L5SaJ9AJ5jUaPQA5iaHR_yB9aR9Ur7y3/view?usp=sharing" download>
+  Descargar fichero Power BI Mapa_Granjas_Años.pbix
+</a>
+<p>Todos los datos utilizados en este informe son de elaboración propia para este informe.</p>
+<br>
+<p>Se puede accedera a este informe para probar su interactividad mediante el siguiente enlace:</p>
+<a href="https://js-cfgcox.stackblitz.io/">https://js-cfgcox.stackblitz.io/</a>
+<br><br><br><br><br><br>
+<p>Por Jose Eduardo Cámara Gómez</p>
+<p>Para la asignatura 08MBID - Visualización de Datos</p>
